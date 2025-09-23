@@ -1,0 +1,9 @@
+services:
+  stock-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: stock-bot
+    restart: unless-stopped
+    env_file:
+      - .env
